@@ -1,0 +1,9 @@
+# example entry
+#
+#endpoint:
+#  type: POST
+#  path: C:\\path\\to\\script.lua
+#
+# adds an endpoints called endpoint accessible through localhost:port/endpoint
+# the script must have a function called execute which takes a string as input and returns either a string (for text) or a table (for binary)
+# with tables being structures table[byteOrder] = byte
