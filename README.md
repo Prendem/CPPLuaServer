@@ -1,13 +1,13 @@
 # Lua HTTP Endpoint Server
 
-A simple educational HTTP server that maps Lua scripts to HTTP endpoints. I built this project mostly as a way to get some hands on experience with low level socket programming it was never intended for use in production environments.
+A simple educational HTTP server that can also map Lua scripts to HTTP endpoints. I built this project mostly as a way to get some hands on experience with low level socket programming it was never intended for use in production environments.
 
 ## Features
 
-- Serve HTTP requests by mapping them to Lua scripts
+- Serve HTTP requests with traditional file types (html/css/js etc) but also allows mapping URLs to server side Lua scripts
 - Configure server settings via `config.ini`
 - Define endpoints in `endpoint.yaml`
-- Scripts receive the raw HTTP request and return a response (string or binary)
+- LUA scripts receive the raw HTTP request and return a response (string or binary)
 
 ## Configuration
 
@@ -16,8 +16,11 @@ A simple educational HTTP server that maps Lua scripts to HTTP endpoints. I buil
 | Setting              | Description                                      |
 |----------------------|--------------------------------------------------|
 | Port                 | Port the server listens on                       |
-| Root directory       | Directory containing the Lua endpoint scripts    |
+| Root directory       | Directory containing any of the supported file types (see below) which will be made available to web clients   |
 | Request buffer size  | Size of the buffer used for incoming requests    |
+
+Supported file types:
+html, css, js, txt, json, xml, svg, png, jpg, gif, webp, ico, mp3, wav, mp4, webm, pdf, zip, gzip
 
 ### `endpoint.yaml`
 
